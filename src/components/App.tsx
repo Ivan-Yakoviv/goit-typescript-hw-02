@@ -22,7 +22,7 @@ const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalData, setModalData] = useState({});
 
-  const getImage = (query) => {
+  const getImage = (query:string) => {
     setSearchQuery(query);
     setCurrentPage(1);
     setPhotos([]);
