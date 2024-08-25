@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import {fetchPhotos} from '../api.js';
-import SearchBar from './SearchBar/SearchBar.jsx';
-import ImageGallery from './ImageGallery/ImageGallery.jsx';
-import Loader from './Loader/Loader.jsx'
-import Error from './Error/Error.jsx'
-import LoadMore from './LoadMore/LoadMore.jsx';
-import ImageModal from './ImageModal/ImageModal.jsx';
+import {fetchPhotos} from '../api';
+import SearchBar from './SearchBar/SearchBar';
+import ImageGallery from './ImageGallery/ImageGallery';
+import Loader from './Loader/Loader'
+import Error from './Error/Error'
+import LoadMore from './LoadMore/LoadMore';
+import ImageModal from './ImageModal/ImageModal';
 import { Toaster } from 'react-hot-toast';
 
 const App = () => {
