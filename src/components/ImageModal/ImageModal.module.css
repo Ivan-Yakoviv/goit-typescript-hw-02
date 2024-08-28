@@ -32,7 +32,7 @@
   margin-bottom: 10px;
 }
 
-.infoListAndLink {
+/* .infoListAndLink {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,7 +62,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-}
+} */
 
 .description {
   display: flex;
@@ -71,7 +71,7 @@
   margin: 0 auto;
 }
 
-.userInfo {
+/* .userInfo {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -79,5 +79,4 @@
 
 .name {
   font-weight: 700;
-  /* margin-bottom: 5px; */
-}
+} */
