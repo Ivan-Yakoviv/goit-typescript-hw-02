@@ -51,7 +51,7 @@ const ImageModal = ({ isOpen, onSetModal, imageData }) => {
           </button>
         </div>
         <img className={s.img} src={urls.regular} alt={alt_description} />
-        <div className={s.infoListAndLink}>
+        {/* <div className={s.infoListAndLink}>
           <ul className={s.infoWrapper}>
             <li className="imageInfo">
               <p className={s.imageInfoHeading}>Likes</p>
@@ -69,14 +69,14 @@ const ImageModal = ({ isOpen, onSetModal, imageData }) => {
               </ul>
             </li>
           </ul>
-        </div>
+        </div> */}
         <p className={s.description}>{description}</p>
-        <div className={s.userInfo}>
+        {/* <div className={s.userInfo}>
           <div>
             <p className={s.name}>{name}</p>
             <p>{location}</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </Modal>
     );

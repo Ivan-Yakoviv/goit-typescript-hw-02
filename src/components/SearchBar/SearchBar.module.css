@@ -1,5 +1,5 @@
 .header {
-  min-width: 100vh;
+  min-width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,18 +14,21 @@
 }
 
 .form {
+  min-width: 320px;
   display: flex;
+  margin: 0 auto;
   background-color: #454e8b;
   padding: 0 20px;
 }
 
 .input {
+  min-width: 250px;
   background-color: #454e8b;
   color: #fff;
   border: none;
   border-radius: 8px;
   font-size: 20px;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .btn {
