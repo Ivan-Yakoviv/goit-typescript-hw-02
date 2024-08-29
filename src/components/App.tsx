@@ -9,30 +9,40 @@ import LoadMore from './LoadMore/LoadMore';
 import ImageModal from './ImageModal/ImageModal';
 import { Toaster } from 'react-hot-toast';
 
-const App = () => {
+export interface Image {
+  id?: string;
+  created_at?: string;
+  description: string;
+  urls: Record<string, string>;
+  links?: Record<string, string>;
+  user: { name: string | null; location: string | null };
+  alt_description?: string;
+}
 
-  const [searchQuery, setSearchQuery] = useState("");
+const App:React.FC = () => {
 
-  const [photos, setPhotos] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  const [photos, setPhotos] = useState<Image[]>([]);
+  const [currentPage, setCurrentPage] = useState<number>(1);
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalData, setModalData] = useState({});
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
 
-  const getImage = (query:string) => {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [modalData, setModalData] = useState<Image | null>(null);
+
+  const getImage = (query:string): void => {
     setSearchQuery(query);
     setCurrentPage(1);
     setPhotos([]);
   };
 
-  const loadMore = () => {
+  const loadMore = (): void => {
     setCurrentPage(currentPage + 1);
   };
 
-   const openModal = (image) => {
+   const openModal = (image: Image): void => {
     setModalData(image);
     setIsModalOpen(true);
   };

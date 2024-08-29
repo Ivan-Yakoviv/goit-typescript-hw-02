@@ -7,9 +7,9 @@ const ImageModal = ({ isOpen, onSetModal, imageData }) => {
     const {
         description,
         urls,
-        likes,
-        tags,
-        user: { name, location },
+        // likes,
+        // tags,
+        // user: { name, location },
         alt_description,
     } = imageData;
 
