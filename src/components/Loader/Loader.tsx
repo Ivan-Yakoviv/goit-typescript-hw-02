@@ -1,7 +1,8 @@
 // import React from 'react'
+import { ReactElement } from "react"
 import { ColorRing } from "react-loader-spinner"
 
-const Loader = () => {
+const Loader = ():ReactElement => {
   return (
     <div>
       <ColorRing

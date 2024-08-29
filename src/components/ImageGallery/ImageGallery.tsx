@@ -1,7 +1,14 @@
+import { ReactElement } from 'react';
+import { Image } from '../App'
 import ImageCard from '../ImageCard/ImageCard'
 import s from './ImageGallery.module.css'
 
-const ImageGallery = ({images, openModal}) => {
+interface ImageGalleryProps {
+  images: Image[];
+  openModal: (image: Image) => void;
+}
+
+const ImageGallery = ({images, openModal}:ImageGalleryProps):ReactElement => {
   return (
     <ul className={s.imageList}>
       {images.map((image) => {

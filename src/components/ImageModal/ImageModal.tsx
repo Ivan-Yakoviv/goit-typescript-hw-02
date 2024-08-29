@@ -1,8 +1,15 @@
+import { ReactElement } from 'react';
+import { Image } from '../App';
 import s from './ImageModal.module.css';
 import Modal from 'react-modal';
 
+interface ImageModalProps {
+  isOpen: boolean;
+  onSetModal: (boolean: boolean) => void;
+  imageData: Image;
+}
 
-const ImageModal = ({ isOpen, onSetModal, imageData }) => {
+const ImageModal = ({ isOpen, onSetModal, imageData }:ImageModalProps): ReactElement => {
 
     const {
         description,
@@ -27,11 +34,11 @@ const ImageModal = ({ isOpen, onSetModal, imageData }) => {
     },
   };
     
-    const onCloseModal = () => {
+    const onCloseModal = ():void => {
         onSetModal(false);
     };
 
-     const handleBodyClassRemove = () => {
+     const handleBodyClassRemove = ():void => {
     document.body.classList.remove("ReactModal__Body--open");
   };
 

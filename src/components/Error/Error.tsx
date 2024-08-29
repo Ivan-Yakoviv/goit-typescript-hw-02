@@ -1,6 +1,8 @@
 // import React from 'react'
 
-const Error = () => {
+import { ReactElement } from "react"
+
+const Error = ():ReactElement => {
   return (
     <div>
       <p>Whoops, something went wrong! Please try reloading this page!</p>

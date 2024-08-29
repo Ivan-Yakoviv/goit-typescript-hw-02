@@ -1,9 +1,14 @@
+import { ReactElement } from 'react';
 import s from './LoadMore.module.css'
 import { animateScroll as scroll } from 'react-scroll';
 
-const LoadMore = ({ onMore }) => {
+interface LoadMoreProps {
+  onMore: () => void;
+}
+
+const LoadMore = ({ onMore }: LoadMoreProps): ReactElement => {
     
-     const handleScrollToTop = () => {
+     const handleScrollToTop = ():void => {
     scroll.scrollToTop({
       duration: 500,
       smooth: 'easeInOutQuart',
