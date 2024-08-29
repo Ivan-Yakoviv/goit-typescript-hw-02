@@ -1,4 +1,4 @@
-import { FormEvent } from 'react';
+import { FormEvent, ReactElement } from 'react';
 import s from './SearchBar.module.css';
 import toast from "react-hot-toast";
 import { PiListMagnifyingGlassLight } from "react-icons/pi";
@@ -7,7 +7,7 @@ interface SearchBarProps {
   onSearch: (query: string) => void;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({onSearch}) => {
+const SearchBar = ({onSearch}: SearchBarProps):ReactElement => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
