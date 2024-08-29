@@ -1,16 +1,18 @@
 import { ReactElement } from 'react';
-import { Image } from '../App';
+import { ModalData } from '../App';
 import s from './ImageModal.module.css';
 import Modal from 'react-modal';
 
 interface ImageModalProps {
   isOpen: boolean;
   onSetModal: (boolean: boolean) => void;
-  imageData: Image;
+  imageData: ModalData;
 }
 
-const ImageModal = ({ isOpen, onSetModal, imageData }:ImageModalProps): ReactElement => {
-
+const ImageModal = ({ isOpen, onSetModal, imageData }:ImageModalProps): ReactElement | null => {
+if (!imageData) {
+    return null;
+  }
     const {
         description,
         urls,

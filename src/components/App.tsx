@@ -19,6 +19,8 @@ export interface Image {
   alt_description?: string;
 }
 
+export type ModalData = Image | null;
+
 const App:React.FC = () => {
 
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -30,7 +32,7 @@ const App:React.FC = () => {
   const [error, setError] = useState<boolean>(false);
 
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  const [modalData, setModalData] = useState<Image | null>(null);
+  const [modalData, setModalData] = useState<ModalData>(null);
 
   const getImage = (query:string): void => {
     setSearchQuery(query);
